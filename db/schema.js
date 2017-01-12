@@ -3,6 +3,9 @@ mongoose.connect('mongodb://localhost/restaurants');
 
 var db = mongoose.connection;
 
+var Schema = mongoose.Schema;
+var ObjectId = Schema.ObjectId;
+
 db.on('error', err => {
   console.log(err);
 });
@@ -11,7 +14,7 @@ db.once("open", () => {
   console.log("database has been connected!");
 });
 
-var Schema = mongoose.Schema;
+
 
 var MenuItemSchema = new Schema({
   title: String
