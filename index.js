@@ -53,7 +53,7 @@ app.post("/restaurants/:name/delete", function(req, res){
 });
 
 app.post("/restaurants/:name", function(req, res) {
-  Restaurant.findOneAndUpdate({name: req.params.name}, {new: true}).then(function(restaurant) {
+  Restaurant.findOneAndUpdate({name: req.params.name}, req.body.restaurant, {new: true}).then(function(restaurant) {
     res.redirect("/restaurants/" + restaurant.name);
   });
 });
