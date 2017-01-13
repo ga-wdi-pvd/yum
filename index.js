@@ -4,6 +4,8 @@ var express   = require("express");
 var mongoose  = require('mongoose');
 var db = mongoose.connection;
 
+var app = express();
+// var Schema = require("./db/schema.js");
 // mongoose.connect("mongodb://localhost/restaurants");
 
 db.on("error", err => {
@@ -14,7 +16,7 @@ db.once("open", () => {
   console.log("database has been connected!");
 })
 
-var Schema = require("./db/schema.js");
+
 
 app.listen(3000, function(){
   console.log("app listening on port " + this.address().port);
