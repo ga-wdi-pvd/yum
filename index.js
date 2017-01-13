@@ -12,8 +12,17 @@ var MenuItem = Schema.MenuItem
 app.set('view engine', 'hbs');
 app.set('views', './views');
 
+app.use(express.static(__dirname + '/public'));
+
+//welcome page
 app.get("/", (req, res) => {
-  res.send("KFC app");
+  res.render("app-welcome");
+});
+
+app.get('/restaurants', (req, res) => {
+  res.render('restaurants-index', {
+  numRestaurants: 55
+  });
 });
 
 app.listen(3002, ()=>{
