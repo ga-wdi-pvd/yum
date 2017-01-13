@@ -1,0 +1,9 @@
+<h2>{{candidates.length}} Candidates!</h2>
+
+{{#each candidates as |candidate|}}
+  <a href="/candidates/{{candidate._id}}">
+    <h4>{{candidate.name}} for president in {{candidate.year}}!</h4>
+  </a>
+{{/each}}
+
+<a href="/candidates/new"><h5>New Candidate</h5></a>
