@@ -1,0 +1,26 @@
+[
+ {
+   "name": "Italian",
+   "address": {
+   "street": "Main St.",
+   "zipCode": 06379
+    },
+   "yelpUrl": "yelp.com",
+ },
+ {
+   "name": "Pizza Place",
+   "address": {
+     "street": "North Main St.",
+     "zipCode": 02891
+    },
+   "yelpUrl": "yelp.com",
+ },
+ {
+   "name": "Dinner Food",
+   "address": {
+   "street": "South Mian St.",
+   "zipCode": 02804
+    },
+   "yelpUrl": "yelp.com",
+ }
+]
