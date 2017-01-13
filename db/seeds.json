@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Newport Creamery",
+    "address": {
+      "street": "57 Charton Ave.",
+      "zipcode": "02860"
+    },
+    "yelpUrl": "www.yelp.com",
+    "items": ["chicken", "burgers"]
+  }
+]
