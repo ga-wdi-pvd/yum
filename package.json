@@ -9,6 +9,17 @@
   "author": "WDI8",
   "license": "ISC",
   "dependencies": {
-    "mongoose": "^4.4.11"
-  }
+    "express": "^4.14.0",
+    "hbs": "^4.0.1",
+    "mongoose": "^4.7.6"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MurphyPicard/yum.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MurphyPicard/yum/issues"
+  },
+  "homepage": "https://github.com/MurphyPicard/yum#readme"
 }
