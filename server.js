@@ -1,8 +1,25 @@
 var mongoose = require('mongoose');
 var Schema = require("./db/schema.js");
-
+mongoose.connect('mongodb://localhost/yum');
 var Restaurant = Schema.Restaurant;
 var MenuItem = Schema.MenuItem;
+
+// Configure HBS
+app.set('view engine', 'hbs');
+app.set('views', './views');
+
+// Middleware
+app.use(express.static(__dirname + '/public'));
+//home
+app.get('/', (req, res) => {
+  res.render('app-welcome');
+});
+
+app.get('/restaurants', (req, res) => {
+  res.render('restaurants-index', {
+    restaurants: db.restaurants
+  });
+});
 
 // Create
 Restaurant.create({ name: 'Cookies-R-Us', "address.zipcode": 20001 }, function (err, restaurant) {
@@ -88,3 +105,24 @@ function removeItem(resturant, item){
     }
   });
 }
+
+app.get('/restaurant/new', (req, res) => {
+  res.render('restaurants-new');
+})
+//show
+app.get('/restaurants/:index', (req, res) =>  {
+  res.render('restaurants-show', {
+    restaurant: db.restaurants[req.params.index]
+  });
+});
+
+
+
+//create route
+app.post('/restaurants', (req, res) => {
+  Restaurant.create(req.body.restaurant)
+})
+//to set up the port
+app.listen(3001, () => {
+  console.log('//********  LISTENING ON PORT 3001  *******//');
+});
