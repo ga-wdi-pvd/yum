@@ -1,0 +1,12 @@
+<a href="/restaurants">Back to Index</a>
+
+<h3>{{restaurant.name}}</h3>
+<h4>{{restaurant.address.street}} {{restaurant.address.zip}}</h4>
+<h4>{{restaurant.yelpUrl}}</h4>
+<h4>
+  {{#each restaurant.items as |item index|}}
+    {{index}}  ---  {{item}}<br>
+  {{/each}}
+</h4>
+
+<a href="/restaurants/{{restaurant._id}}">Delete</a>
