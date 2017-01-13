@@ -1,0 +1,8 @@
+<h2>{{restaurant.length}} Restaurants</h2>
+
+{{#each restaurant as |restaurant index|}}
+<a href="/restaurants/{{index}}">
+<h3>{{restaurant.name}} </h3>
+</a>
+{{/each}}
+<a href="/restaurant/new">Create New Restaurant</a>
